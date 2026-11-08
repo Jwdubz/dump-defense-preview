@@ -10,23 +10,39 @@
 <link rel="preload" href="fonts/gs-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/playfair-i500-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%230b0b0c%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%229%22 fill=%22none%22 stroke=%22%23d4ae5a%22 stroke-width=%222.4%22/%3E%3C/svg%3E">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
 </head>
 <body>
 <a class="skip" href="#ask">Skip to booking</a>
 
 <header class="hdr" id="hdr">
   <a class="mark" href="#top" aria-label="Dump Defense, back to top">Dump <span>Defense</span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#calls">Calls</a><a href="#records">Records</a><a href="#visits">Visits</a><a href="#monday">Monday list</a><a href="#guardrails">Guardrails</a>
+  </nav>
+  <a class="nav-cta" href="#ask">Book a walkthrough</a>
+  <button type="button" class="menu-b" id="menuB" aria-expanded="false" aria-controls="menu"><span class="mb-l" aria-hidden="true"></span>Menu</button>
 </header>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Sections, full menu">
+    <a href="#calls"><i>01</i>Calls</a><a href="#records"><i>02</i>Records</a><a href="#visits"><i>03</i>Visits</a><a href="#monday"><i>04</i>Monday list</a><a href="#guardrails"><i>05</i>Guardrails</a><a href="#ask" class="m-ask"><i>06</i><em class="gs">Book a walkthrough</em></a>
+  </nav>
+</div>
 
 <main id="top">
 
 <!-- 1 -->
 <section class="beat b1" id="b1" aria-labelledby="h1">
   <div class="stage">
-    <svg class="rings" viewBox="-500 -500 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <div class="ringbox" aria-hidden="true"><svg class="rings" viewBox="-500 -500 1000 1000">
       <circle class="r r1" r="60"/><circle class="r r2" r="60"/><circle class="r r3" r="60"/>
-    </svg>
+    </svg></div>
+    <div class="call" aria-hidden="true">
+      <p class="call-k"><i class="call-dot"></i>Incoming call</p>
+      <p class="call-n">(702) •••-••47</p>
+      <p class="call-s"><span class="cs cs1">Ringing <b>1</b></span><span class="cs cs2">Ringing <b>2</b></span><span class="cs cs3">Ringing <b>3</b></span><span class="cs cs4">No answer</span></p>
+      <p class="call-t">10:47 PM · After hours</p>
+    </div>
     <h1 id="h1" class="h1">
       <span class="ln"><span class="w">Third Ring.</span></span>
       <span class="ln"><span class="w">No Answer.</span></span>
@@ -44,13 +60,13 @@
     <div class="b2-copy">
       <p class="big" aria-hidden="true"><span class="n" data-to="48">48</span><span class="pc">%</span></p>
       <h2 id="h2" class="h2"><span class="sr">48% </span>of law firms couldn’t be reached by phone.</h2>
-      <p class="src">Clio 2024 Legal Trends Report secret-shopper study</p>
+      <p class="src">Source: <a href="https://www.clio.com/blog/highlights-from-2024-legal-trends-report/" target="_blank" rel="noopener">Clio 2024 Legal Trends Report</a>, secret-shopper study</p>
     </div>
   </div>
 </section>
 
 <!-- 3 -->
-<section class="beat b3" id="b3" aria-labelledby="h3">
+<section class="beat b3" id="calls" aria-labelledby="h3">
   <div class="stage">
     <div class="catch" aria-hidden="true">
       <i class="gline h"></i>
@@ -66,7 +82,7 @@
 </section>
 
 <!-- 4 -->
-<section class="beat b4" id="b4" aria-labelledby="h4">
+<section class="beat b4" id="records" aria-labelledby="h4">
   <div class="stage">
     <h2 id="h4" class="h2">Records requests that keep moving.</h2>
     <div class="cad" aria-hidden="true">
@@ -84,16 +100,20 @@
 </section>
 
 <!-- 5 -->
-<section class="beat b5" id="b5" aria-labelledby="h5">
+<section class="beat b5" id="visits" aria-labelledby="h5">
   <div class="stage">
     <h2 id="h5" class="h2">Every visit, accounted for.</h2>
-    <div class="cal" aria-hidden="true"></div>
+    <div class="calw" aria-hidden="true">
+      <p class="cal-h"><span>Sample client</span><span>Treatment schedule</span><span>Two weeks</span></p>
+      <div class="cal"></div>
+      <p class="cal-log"><i></i>Day 8 · PT 9:30 · Missed · Reason logged for your attorney</p>
+    </div>
     <p class="sub">A missed visit is a gap in care. It gets flagged, with the reason logged for your attorney.</p>
   </div>
 </section>
 
 <!-- 6 -->
-<section class="beat b6" id="b6" aria-labelledby="h6">
+<section class="beat b6" id="monday" aria-labelledby="h6">
   <div class="stage">
     <div class="b6-in split">
       <div class="lead"><h2 id="h6" class="h2">Monday’s list <em class="gs">writes itself.</em></h2>
@@ -114,9 +134,9 @@
   <div class="stage">
     <h2 id="h7" class="h2">Three readers. <em class="gs">One answer.</em></h2>
     <div class="readers" aria-hidden="true">
-      <div class="rd"><p class="rh">Drafter</p><div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="ok">Agrees</span></div>
-      <div class="rd"><p class="rh">Reader One</p><div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="ok">Agrees</span></div>
-      <div class="rd"><p class="rh">Reader Two</p><div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="ok">Agrees</span></div>
+      <div class="rd"><p class="rh">Drafter</p><div class="doc"><p class="dl">Sample client update</p><p class="dt"><span>Your records request was confirmed on Day 1.</span> <span>We follow up every few days until it arrives.</span> <span>Your attorney reviews it next.</span></p></div><ul class="chk"><li>Matches the case file</li><li>No legal advice</li><li>No case value</li></ul><span class="ok">Agrees</span></div>
+      <div class="rd"><p class="rh">Reader One</p><div class="doc"><p class="dl">Sample client update</p><p class="dt"><span>Your records request was confirmed on Day 1.</span> <span>We follow up every few days until it arrives.</span> <span>Your attorney reviews it next.</span></p></div><ul class="chk"><li>Matches the case file</li><li>No legal advice</li><li>No case value</li></ul><span class="ok">Agrees</span></div>
+      <div class="rd"><p class="rh">Reader Two</p><div class="doc"><p class="dl">Sample client update</p><p class="dt"><span>Your records request was confirmed on Day 1.</span> <span>We follow up every few days until it arrives.</span> <span>Your attorney reviews it next.</span></p></div><ul class="chk"><li>Matches the case file</li><li>No legal advice</li><li>No case value</li></ul><span class="ok">Agrees</span></div>
       <i class="gline h join"></i>
     </div>
     <p class="sub">Each client update is read by three separate readers. Only when all three agree does it go out. If any one doesn’t, your staff sees it first.</p>
@@ -125,7 +145,7 @@
 </section>
 
 <!-- 8 -->
-<section class="beat b8" id="b8" aria-labelledby="h8">
+<section class="beat b8" id="guardrails" aria-labelledby="h8">
   <div class="stage">
     <div class="split"><h2 id="h8" class="h2">The lines it <em class="gs">never crosses.</em></h2>
     <ul class="lines">
@@ -161,6 +181,6 @@
 
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/lenis.min.js"></script>
-<script src="site.js?v=3"></script>
+<script src="site.js?v=4"></script>
 </body>
 </html>
